@@ -1,0 +1,405 @@
+//// setting custom class ////
+// @import url('https://fonts.googleapis.com/css?family=Roboto:Thin,Light,Regular,Medium,Bold,Black');
+
+.border-radius(@radius: 10px)
+{
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.noSelectText
+{
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.shadow(@s: 3px 3px 4px #444) {
+    -moz-box-shadow: @s;
+    -webkit-box-shadow: @s;
+    box-shadow: @s;
+}
+
+.translate (@x: -50%, @y: -50%)
+{
+    -webkit-transform: translate( @x, @y );
+    -moz-transform: translate( @x, @y );
+    -o-transform: translate( @x, @y );
+    transform: translate( @x, @y );
+}
+
+.center
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  .translate(-50%, -50%);
+
+}
+
+.centerVertical
+{
+    position: absolute;
+    top: 50%;
+
+    .translate(0%, -50%);
+}
+
+.brillo(@br: 1.2)
+{
+    filter: brightness(@br);
+    // Browser Specific
+    -webkit-filter: brightness(@br);
+    -moz-filter: brightness(@br);
+    -o-filter: brightness(@br);
+    -ms-filter: brightness(@br);
+}
+
+.box-sizing
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.animate(@a: all .2s ease-in-out)
+{
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.noappearance
+{
+  -webkit-appearance:none
+}
+.background-cover
+{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.flex
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.grayscale
+{
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+.degradacionAzul
+{
+  background: rgba(219,239,238,1);
+  background: -moz-linear-gradient(-45deg, rgba(219,239,238,1) 0%, rgba(167,209,209,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(219,239,238,1)), color-stop(100%, rgba(167,209,209,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(219,239,238,1) 0%, rgba(167,209,209,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(219,239,238,1) 0%, rgba(167,209,209,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(219,239,238,1) 0%, rgba(167,209,209,1) 100%);
+  background: linear-gradient(135deg, rgba(219,239,238,1) 0%, rgba(167,209,209,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbefee', endColorstr='#a7d1d1', GradientType=1 );
+}
+
+.ellipsis
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+//////// Desktop - notebooks /////////////
+
+body
+{
+  // font-family: 'adelle-sans', sans-serif;
+  font-family: filson-soft, sans-serif;
+  font-style: normal;
+
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  .flex;
+
+  #app
+  {
+    width: 100%;
+
+    
+  }
+
+  #loading
+  {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #e4f3fd;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    justify-content: center;
+    .flex;
+
+    .spinner
+    {
+      width: 50px;
+      height: 50px;
+      display: block;
+      background-image: url(../img/spinner.svg);
+      background-size: cover;
+      align-self: center;
+    }
+  }
+
+  .hide
+  {
+    display: none !important;
+  }
+
+  .nothing
+  {
+    width: 65%;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .flex;
+  }
+
+  ///// icons /////
+
+  i.icon
+  {
+    align-self: center;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 100%;
+    display: block;
+    // .border-radius(50%);
+
+    &.smaller
+    {
+      width: 17px;
+      height: 17px;
+      margin: 7px;
+    }
+
+    &.small
+    {
+      width: 25px;
+      height: 25px;
+      margin: 4px;
+    }
+
+    &.bitsmall
+    {
+      width: 16px;
+      height: 16px;
+      margin: 0px;
+    }
+
+    &.normal
+    {
+      width: 26px;
+      height: 26px;
+    }
+
+    &.big
+    {
+      width: 100%;
+      height: 150px;
+    }
+    //
+    // &.light_blue
+    // {
+    //   background-color: #87b4c6;
+    //
+    //   &:hover
+    //   {
+    //     background-color: #27b7f1;
+    //     cursor: pointer;
+    //   }
+    // }
+
+    &.transparent
+    {
+      // &:hover
+      // {
+      //   transform: scale(1.25);
+      //   cursor: pointer;
+      //   .animate();
+      // }
+    }
+
+    &.transparent_white_border
+    {
+      background-color: transparent;
+      border: 1px solid white;
+
+      &:hover
+      {
+        background-color: rgba(255, 255, 255, 0.35);
+        .animate();
+      }
+    }
+
+    &.logo_black
+    {
+      background-image: url(../img/caldearte_logo_black.svg);
+    }
+
+    &.logo_calipso
+    {
+      background-image: url(../img/caldearte.svg);
+    }
+
+    &.facebook_calipso
+    {
+      background-image: url(../img/facebook_calipso.svg);
+    }
+
+    &.twitter_calipso
+    {
+      background-image: url(../img/twitter_calipso.svg);
+    }
+    &.releasebird
+    {
+      background-image: url(../img/releasebird.svg);
+    }
+
+  }
+
+}
+
+//////// Mobile - Tablet //////////
+@media (max-width:1025px) {
+  .caldearte
+  {
+    flex-direction: column;
+
+    .appPanel
+    {
+      width: 100% !important;
+
+      .fixedContent
+      {
+        width: 100% !important;
+        position: relative !important;
+
+        .logo
+        {
+
+          i
+          {
+            height: 80px;
+            margin-top: 10px;
+          }
+
+          .slogan
+          {
+            margin-bottom: 10px !important;
+
+          }
+        }
+
+        .artfilter
+        {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+
+          .filter
+          {
+            h3
+            {
+              font-size: 12px;
+            }
+
+            .select
+            {
+              padding: 4px !important;
+              margin-bottom: 4px !important;
+
+
+              select
+              {
+                width: 160px !important;
+              }
+            }
+          }
+        }
+
+        .speech
+        {
+          display: none !important;
+        }
+
+        .social
+        {
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+
+      }
+    }
+
+    .pastopening
+    {
+      .summary
+      {
+        font-size: 12px !important;
+        margin-top: 8px;
+        .ellipsis;
+      }
+
+      .datetime
+      {
+        font-size: 12px !important;
+        .ellipsis;
+      }
+
+      .location
+      {
+        font-size: 12px !important;
+        .ellipsis;
+      }
+    }
+    .content
+    {
+      width: 100% !important;
+
+      .timefilter
+      {
+        position: relative !important;
+
+        .resume
+        {
+          align-self: center !important;
+          position: relative !important;
+          margin-top: 18px;
+          margin-bottom: -30px;
+        }
+      }
+
+      .categories
+      {
+        top: 0 !important;
+      }
+    }
+  }
+}

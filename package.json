@@ -1,0 +1,56 @@
+{
+  "name": "gameoflife",
+  "version": "1.0.0",
+  "description": "game of life demo in MERN with redux",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-llach/gameOfLife.git"
+  },
+  "keywords": [
+    "game",
+    "of",
+    "life"
+  ],
+  "author": "Daniel Llach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-llach/gameOfLife/issues"
+  },
+  "homepage": "https://github.com/daniel-llach/gameOfLife#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "express": "^4.14.0",
+    "hjs": "0.0.6",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.1",
+    "redux-promise-middleware": "^4.2.0",
+    "redux-thunk": "^2.2.0",
+    "serve-favicon": "^2.3.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
